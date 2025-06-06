@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kacirebonan - Menelusuri warisan budaya Cirebon yang kaya akan perpaduan Jawa, Sunda, Tionghoa, dan Arab. Temukan keindahan batik Mega Mendung, tari topeng, dan keraton Cirebon.">
+    <meta name="keywords" content="Kacirebonan, Cirebon, batik, mega mendung, tari topeng, keraton, budaya Indonesia">
+    <meta name="author" content="Kacirebonan Heritage">
+    
+    <title>Kacirebonan - Warisan Budaya Cirebon yang Memukau</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="mega-mendung.png">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #c62828;
+            --secondary-color: #ad1457;
+            --accent-color: #880e4f;
+            --gold-color: #ffd700;
+            --light-pink: #f8bbd0;
+            --very-light-pink: #fce4ec;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+            --border-radius: 15px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f3e5f5 100%);
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><defs><pattern id="batik" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23batik)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: 4px solid var(--gold-color);
+            padding: 8px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #fff, var(--gold-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-style: italic;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .header-ornament {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .ornament {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(136, 14, 79, 0.95);
+            backdrop-filter: blur(15px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul li a:hover {
+            background: var(--light-pink);
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(248, 187, 208, 0.4);
+        }
+
+        nav ul li a i {
+            font-size: 1rem;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        /* Intro Section */
+        .intro {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--gold-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            color: var(--text-light);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: var(--shadow-hover);
+            transition: var(--transition);
+            margin: 3rem auto;
+            display: block;
+            border: 5px solid var(--white);
+        }
+
+        .main-image:hover {
+            transform: scale(1.02) translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            background: var(--white);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--very-light-pink), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .feature:hover::before {
+            opacity: 1;
+        }
+
+        .feature:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--gold-color);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 20px rgba(173, 20, 87, 0.3);
+        }
+
+        .feature h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature p {
+            color: var(--text-light);
+            line-height: 1.8;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            font-size: 1rem;
+        }
+
+        /* Cultural Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: var(--white);
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--very-light-pink), var(--light-pink));
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8rem;
+            color: var(--secondary-color);
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--accent-color);
+            font-style: italic;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 3rem 1rem 2rem;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0,40 Q250,0 500,40 T1000,40 V100 H0 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            padding: 0.5rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .footer-links a:hover {
+            background: var(--gold-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+
+            .header-ornament {
+                gap: 0.5rem;
+            }
+
+            .ornament {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .intro {
+                margin-bottom: 3rem;
+            }
+
+            .feature {
+                padding: 2rem 1.5rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+
+            .quote-section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dengan ornamen batik -->
+    <header>
+        <div class="header-content">
+            <img src="mega-mendung.png" alt="Motif Mega Mendung - Logo Kacirebonan" class="logo">
+            <h1>Kacirebonan</h1>
+            <p class="subtitle">Menelusuri Warisan Budaya Cirebon</p>
+            <div class="header-ornament">
+                <div class="ornament">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="ornament">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="ornament">
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigasi yang lebih interaktif -->
+    <nav>
+        <div class="nav-container">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="#beranda"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="#sejarah"><i class="fas fa-book-open"></i> Sejarah</a></li>
+                <li><a href="#kesenian"><i class="fas fa-palette"></i> Kesenian</a></li>
+                <li><a href="#galeri"><i class="fas fa-images"></i> Galeri</a></li>
+                <li><a href="#kontak"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Konten utama yang diperkaya -->
+    <main>
+        <section id="beranda" class="intro fade-in">
+            <h2>Selamat Datang Di Dunia Kacirebonan</h2>
+            <p class="intro-text">
+                Kacirebonan merupakan warisan budaya yang tumbuh dari perpaduan harmonis antara Jawa, Sunda, Tionghoa, dan Arab. 
+                Dalam setiap motif batik Mega Mendung yang mengalir, setiap gerakan tari topeng yang memukau, hingga kemegahan 
+                keraton yang berdiri kokoh, terpancar kekayaan budaya Cirebon yang tak ternilai harganya. Mari kita telusuri 
+                keindahan dan makna mendalam dari warisan leluhur yang luar biasa ini.
+            </p>
+            <img src="wayang-cirebon.jpg" alt="Pertunjukan Wayang Kulit Cirebon" class="main-image">
+        </section>
+
+        <!-- Statistik budaya -->
+        <section class="stats fade-in">
+            <div class="stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Tahun Sejarah</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Budaya Perpaduan</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Keraton Bersejarah</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Motif Batik</span>
+            </div>
+        </section>
+
+        <!-- Quote inspiratif -->
+        <section class="quote-section fade-in">
+            <p class="quote">
+                Cirebon bukan hanya sebuah kota, tetapi sebuah peradaban yang hidup, 
+                tempat di mana keberagaman menjadi kekuatan dan tradisi menjadi inspirasi abadi.
+            </p>
+        </section>
+
+        <!-- Features yang diperkaya -->
+        <section id="kesenian" class="features">
+            <div class="feature fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3>Batik Mega Mendung</h3>
+                <p>
+                    Motif batik khas Cirebon yang melambangkan kesabaran dan ketenangan jiwa. 
+                    Corak awan yang mengalir dalam gradasi warna mencerminkan filosofi hidup 
+                    yang damai, sabar, dan penuh makna spiritual yang mendalam.
+                </p>
+            </div>
+
+            <div class="feature fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-masks-theater"></i>
+                </div>
+                <h3>Tari Topeng Cirebon</h3>
+                <p>
+                    Tari tradisional yang menggambarkan cerita wayang dengan topeng berwarna-warni 
+                    yang memukau. Setiap gerakan dan ekspresi topeng memiliki makna mendalam, 
+                    menceritakan perjalanan kehidupan manusia dengan segala kompleksitasnya.
+                </p>
+            </div>
+
+            <div class="feature fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>Keraton Cirebon</h3>
+                <p>
+                    Pusat kebudayaan dan sejarah yang masih aktif hingga kini, menjadi saksi bisu 
+                    perjalanan panjang peradaban Cirebon. Arsitektur yang memadukan berbagai 
+                    pengaruh budaya menciptakan harmoni yang luar biasa indah.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer yang lebih informatif -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">
+                &copy; 2025 Kacirebonan Heritage. Semua hak dilindungi. 
+                <br>Lestarikan budaya untuk generasi mendatang 🇮🇩
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk interaktivitas -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(136, 14, 79, 0.98)';
+            } else {
+                nav.style.background = 'rgba(136, 14, 79, 0.95)';
+            }
+        });
+
+        // Loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
